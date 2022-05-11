@@ -105,12 +105,12 @@ public class AppTest {
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).add(random);
 
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.add(m2));
         BigDecimal resultR = new BigDecimal(m1).add(m2);
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
 
@@ -127,13 +127,13 @@ public class AppTest {
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c2 = keyPair.publicKey.encrypt(m2);
 
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.add(c2));
         BigDecimal resultR = new BigDecimal(m1).add(m2);
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
@@ -146,7 +146,7 @@ public class AppTest {
         Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(keyLength);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigInteger m2 = randomInt(BigInteger.valueOf(keyLength));
@@ -154,7 +154,7 @@ public class AppTest {
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.add(m2));
         BigDecimal resultR = new BigDecimal(String.valueOf(m1)).add(new BigDecimal(m2));
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
@@ -167,7 +167,7 @@ public class AppTest {
         Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(keyLength);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigInteger m2 = randomInt(BigInteger.valueOf(keyLength));
@@ -176,7 +176,7 @@ public class AppTest {
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.add(c2));
         BigDecimal resultR = new BigDecimal(String.valueOf(m1)).add(new BigDecimal(m2));
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
@@ -189,15 +189,15 @@ public class AppTest {
         Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(keyLength);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).add(random);
 
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.add(m2));
         BigDecimal resultR = new BigDecimal(String.valueOf(m1)).add(m2);
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
@@ -220,7 +220,7 @@ public class AppTest {
         BigDecimal resultL = ((BigDecimal) keyPair.privateKey.decrypt(c1.add(c2)));
         BigDecimal resultR = m1.add(m2);
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
 
@@ -274,12 +274,12 @@ public class AppTest {
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).add(random);
 
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.subtract(m2));
         BigDecimal resultR = new BigDecimal(m1).subtract(m2);
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
 
@@ -296,13 +296,13 @@ public class AppTest {
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c2 = keyPair.publicKey.encrypt(m2);
 
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.subtract(c2));
         BigDecimal resultR = new BigDecimal(m1).subtract(m2);
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
@@ -315,7 +315,7 @@ public class AppTest {
         Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(keyLength);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigInteger m2 = randomInt(BigInteger.valueOf(keyLength));
@@ -323,7 +323,7 @@ public class AppTest {
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.subtract(m2));
         BigDecimal resultR = new BigDecimal(String.valueOf(m1)).subtract(new BigDecimal(m2));
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
@@ -336,7 +336,7 @@ public class AppTest {
         Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(keyLength);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigInteger m2 = randomInt(BigInteger.valueOf(keyLength));
@@ -345,7 +345,7 @@ public class AppTest {
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.subtract(c2));
         BigDecimal resultR = new BigDecimal(String.valueOf(m1)).subtract(new BigDecimal(m2));
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
@@ -358,15 +358,15 @@ public class AppTest {
         Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(keyLength);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).add(random);
 
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.subtract(m2));
         BigDecimal resultR = new BigDecimal(String.valueOf(m1)).subtract(m2);
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
@@ -389,7 +389,7 @@ public class AppTest {
         BigDecimal resultL = ((BigDecimal) keyPair.privateKey.decrypt(c1.subtract(c2)));
         BigDecimal resultR = m1.subtract(m2);
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
@@ -422,12 +422,12 @@ public class AppTest {
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).add(random);
 
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.multiply(m2));
         BigDecimal resultR = new BigDecimal(m1).multiply(m2);
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
 
@@ -441,7 +441,7 @@ public class AppTest {
         Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(keyLength);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigInteger m2 = randomInt(BigInteger.valueOf(keyLength));
@@ -449,7 +449,7 @@ public class AppTest {
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.multiply(m2));
         BigDecimal resultR = new BigDecimal(String.valueOf(m1)).multiply(new BigDecimal(m2));
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
 
@@ -463,16 +463,16 @@ public class AppTest {
         Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(keyLength);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).add(random);
 
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.multiply(m2));
         BigDecimal resultR = new BigDecimal(String.valueOf(m1)).multiply(m2);
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
@@ -492,7 +492,7 @@ public class AppTest {
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.divide(m2));
         BigDecimal resultR = BigDecimal.valueOf(m1.doubleValue() / m2.doubleValue());
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
@@ -508,12 +508,12 @@ public class AppTest {
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).add(random);
 
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.divide(m2));
         BigDecimal resultR = BigDecimal.valueOf(m1.doubleValue() / m2.doubleValue());
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
 
@@ -527,7 +527,7 @@ public class AppTest {
         Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(keyLength);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         BigInteger m2 = randomInt(BigInteger.valueOf(keyLength));
@@ -535,7 +535,7 @@ public class AppTest {
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.divide(m2));
         BigDecimal resultR = BigDecimal.valueOf(m1.doubleValue() / m2.doubleValue());
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
 
@@ -549,16 +549,16 @@ public class AppTest {
         Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(keyLength);
 
         BigDecimal random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m1 = randomDec(BigInteger.valueOf(keyLength)).add(random);
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
         random = BigDecimal.valueOf(new Random().nextDouble());
-        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).multiply(random);
+        BigDecimal m2 = randomDec(BigInteger.valueOf(keyLength)).add(random);
 
         BigDecimal resultL = (BigDecimal) keyPair.privateKey.decrypt(c1.divide(m2));
         BigDecimal resultR = BigDecimal.valueOf(m1.doubleValue() / m2.doubleValue());
 
-        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-9)) <= 0);
+        assertTrue(resultL.subtract(resultR).compareTo(BigDecimal.valueOf(1e-8)) <= 0);
     }
 
     /**
