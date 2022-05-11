@@ -59,7 +59,20 @@
             <version>1.7.36</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.shine813</groupId>
+            <artifactId>PHE-Maven</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://www.jitpack.io</url>
+        </repository>
+    </repositories>
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
