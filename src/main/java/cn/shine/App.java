@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
  * Java Library <p>
  * |- title:     phe-java <p>
  * |- summary:   Partially Homomorphic Encryption library for Java <p>
- * |- uri:       <a href="https://github.com/shine813/Secure-Multi-Party-Computation-Protocol">https://github.com/shine813/Secure-Multi-Party-Computation-Protocol</a>
+ * |- uri:       <a href="https://github.com/shine813/PHE-Maven">https://github.com/shine813/PHE-Maven</a>
  * |- version:   1.0.0 <p>
  * |- author:    Zhan Shi <p>
  * |- email:     phe.zshi@gmail.com <p>
