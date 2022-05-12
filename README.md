@@ -42,7 +42,7 @@ Maven:
     <dependency>
         <groupId>io.github.shine813</groupId>
             <artifactId>PHE-Maven</artifactId>
-        <version>1.0.0</version>
+        <version>1.0-SNAPSHOT</version>
     </dependency>
 </dependencies>
 ```
