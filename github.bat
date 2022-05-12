@@ -39,7 +39,7 @@ F:
 cd %DEPLOY_PATH%
 echo 本地存储库的发送到github仓库%branch%分支上
 git add .
-git commit -m "提交新的版本"
+git commit -m "new version"
 git pull
 git push origin %branch%
 
