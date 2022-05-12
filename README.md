@@ -1,7 +1,5 @@
 <h1 align='center' >PHE-Maven</h1>
 
-
----
 <a href="https://github.com/shine813/PHE-Maven"><img src="https://img.shields.io/badge/phe_maven-1.0.0-green"></a>
 
 <a href="https://s01.oss.sonatype.org/content/repositories/snapshots/io/github/shine813/"><img src="https://img.shields.io/badge/sonatype-1.0.0-blue"></a>
