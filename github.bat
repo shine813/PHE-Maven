@@ -21,7 +21,7 @@ if "r"=="%arg%" (
     set "branch=release"
 )
 
-D:
+C:
 cd %DEPLOY_PATH%
 git pull
 
