@@ -1,10 +1,10 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
 #Thu May 12 21:53:05 CST 2022
-PHE-Maven-1.0.0-SNAPSHOT.pom>=
-PHE-Maven-1.0.0-SNAPSHOT-javadoc.jar>=
-PHE-Maven-1.0.0-SNAPSHOT-javadoc.jar.asc>=
-PHE-Maven-1.0.0-SNAPSHOT-sources.jar>=
-PHE-Maven-1.0.0-SNAPSHOT-sources.jar.asc>=
-PHE-Maven-1.0.0-SNAPSHOT.jar.asc>=
-PHE-Maven-1.0.0-SNAPSHOT.jar>=
-PHE-Maven-1.0.0-SNAPSHOT.pom.asc>=
+PHE-Maven-1.0.0.pom>=
+PHE-Maven-1.0.0-javadoc.jar>=
+PHE-Maven-1.0.0-javadoc.jar.asc>=
+PHE-Maven-1.0.0-sources.jar>=
+PHE-Maven-1.0.0-sources.jar.asc>=
+PHE-Maven-1.0.0.jar.asc>=
+PHE-Maven-1.0.0.jar>=
+PHE-Maven-1.0.0.pom.asc>=

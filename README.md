@@ -38,7 +38,7 @@ Maven:
 ```xml
 <dependencies>
     <dependency>
-        <groupId>io.github.shine813</groupId>
+        <groupId>cn.shine</groupId>
             <artifactId>PHE-Maven</artifactId>
         <version>1.0.0</version>
     </dependency>
