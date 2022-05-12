@@ -41,6 +41,7 @@ echo 本地存储库的发送到github仓库%branch%分支上
 git add .
 git commit -m "new version"
 git pull
+git remote set-url origin https://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@github.com/shine813/PHE-Maven.git
 git push origin %branch%
 
 echo 将%branch%分支合并到master分支
