@@ -35,6 +35,18 @@ See `pom.xml`。
 
 ## Example
 
+Maven:
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>io.github.shine813</groupId>
+            <artifactId>PHE-Maven</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+</dependencies>
+```
+
 See `src/main/java/io/github/shine813/APP.java`.
 
 ---
