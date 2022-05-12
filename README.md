@@ -2,8 +2,6 @@
 
 <a href="https://github.com/shine813/PHE-Maven"><img src="https://img.shields.io/badge/phe_maven-1.0.0-green"></a>
 
-<a href="https://s01.oss.sonatype.org/content/repositories/snapshots/io/github/shine813/"><img src="https://img.shields.io/badge/sonatype-1.0.0-blue"></a>
-
 ---
 
 ## Background
@@ -42,7 +40,7 @@ Maven:
     <dependency>
         <groupId>io.github.shine813</groupId>
             <artifactId>PHE-Maven</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </dependency>
 </dependencies>
 ```
@@ -56,8 +54,6 @@ See `src/main/java/io/github/shine813/APP.java`.
 Author：Shenyang Aerospace University-DSPC Zhan Shi
 
 Github: https://github.com/shine813/
-
-Sonatype: https://s01.oss.sonatype.org/content/repositories/snapshots/io/github/shine813/
 
 Email：phe.zshi@gmail.com
 
