@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"cn.shine"},{"l":"cn.shine.phe"},{"l":"cn.shine.report"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"io.github.shine813"},{"l":"io.github.shine813.phe"},{"l":"io.github.shine813.report"}];updateSearchResults();
