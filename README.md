@@ -6,7 +6,7 @@
 
 ## Background
 
-<p align="justify">
+<div align="justify">
 The Paillier encryption system is a probabilistic public key encryption system invented by Paillier in 1999. 
 Difficult problems based on composite residual classes. 
 The encryption algorithm is a homomorphic encryption, which satisfies the homomorphism of addition and multiplication.
@@ -32,6 +32,7 @@ Package in `branches/mvn-repo`.
 Maven in
 
 ```xml
+
 <dependencies>
     <dependency>
         <groupId>cn.shine</groupId>
@@ -54,16 +55,18 @@ See `pom.xml`。
 
 ## Example
 
-See `src/main/java/io/github/shine813/APP.java`.
+See `src/main/java/cn/shine/APP.java`.
 
 ---
 
 ## Contact
 
-Author：Shenyang Aerospace University-DSPC Zhan Shi
+Author: Shenyang Aerospace University-DSPC Zhan Shi
 
 Github: https://github.com/shine813/
 
-Email：phe.zshi@gmail.com
+Email: phe.zshi@gmail.com
 
 If you have any questions, please contact the author in time.
+
+</div>
