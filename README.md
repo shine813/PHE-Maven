@@ -27,7 +27,7 @@ Based on [phe](https://github.com/data61/python-paillier) library (Paillier Homo
 - `JDK15`
 - `Maven3`
 
-Package in `package`.
+Package in `branches/mvn-repo`.
 
 Maven in
 
