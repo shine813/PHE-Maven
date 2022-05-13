@@ -27,23 +27,13 @@ Based on [phe](https://github.com/data61/python-paillier) library (Paillier Homo
 - `JDK15`
 - `Maven3`
 
+Package in `package`.
+
 See `pom.xml`。
 
 ---
 
 ## Example
-
-Maven:
-
-```xml
-<dependencies>
-    <dependency>
-        <groupId>cn.shine</groupId>
-            <artifactId>PHE-Maven</artifactId>
-        <version>1.0.0</version>
-    </dependency>
-</dependencies>
-```
 
 See `src/main/java/io/github/shine813/APP.java`.
 
