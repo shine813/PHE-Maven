@@ -29,6 +29,25 @@ Based on [phe](https://github.com/data61/python-paillier) library (Paillier Homo
 
 Package in `package`.
 
+Maven in
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>cn.shine</groupId>
+        <artifactId>PHE-Maven</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+</dependencies>
+
+<repositories>
+    <repository>
+        <id>PHE-Maven</id>
+        <url>https://raw.github.com/shine813/PHE-Maven/mvn-repo/</url>
+    </repository>
+</repositories>
+```
+
 See `pom.xml`。
 
 ---
