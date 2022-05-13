@@ -199,7 +199,7 @@ public class Paillier {
                 result = new BigInteger(this.n.bitLength(), rand).abs();
             } while (result.equals(BigInteger.ZERO));
 
-            return new BigInteger(this.n.bitLength(), rand);
+            return result;
         }
 
         /**
