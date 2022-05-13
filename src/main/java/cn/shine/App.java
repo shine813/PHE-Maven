@@ -13,6 +13,9 @@ package cn.shine;
 import cn.shine.phe.Paillier;
 import org.jetbrains.annotations.NotNull;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 /**
  * A Python-based phe library to implement Paillier Homomorphic Encryption method
  * <p>
@@ -59,15 +62,15 @@ public class App {
                                       Double m2, Paillier.EncryptedNumber c2,
                                       double v, double v2, double v3, double v4) {
         // Integer type example
-        assert (Integer) keyPair.privateKey.decrypt(c.add(c1)) == m + m1;
-        assert (Integer) keyPair.privateKey.decrypt(c.subtract(c1)) == m - m1;
-        assert (Integer) keyPair.privateKey.decrypt(c.multiply(m1)) == m * m1;
-        assert (Integer) keyPair.privateKey.decrypt(c.divide(m1)) == m / m1;
+        assert keyPair.privateKey.decrypt(c.add(c1)).equals(BigInteger.valueOf(m + m1));
+        assert keyPair.privateKey.decrypt(c.subtract(c1)).equals(BigInteger.valueOf(m - m1));
+        assert keyPair.privateKey.decrypt(c.multiply(m1)).equals(BigInteger.valueOf((long) m * m1));
+        assert keyPair.privateKey.decrypt(c.divide(m1)).equals(BigDecimal.valueOf((m / m1) * 1.0));
         // Double or Float type example
-        assert (Double) keyPair.privateKey.decrypt(c.add(c2)) == v;
-        assert (Double) keyPair.privateKey.decrypt(c.subtract(c2)) == v2;
-        assert (Double) keyPair.privateKey.decrypt(c.multiply(m2)) == v3;
-        assert (Double) keyPair.privateKey.decrypt(c.divide(m2)) == v4;
+        assert keyPair.privateKey.decrypt(c.add(c2)).equals(BigDecimal.valueOf(v));
+        assert keyPair.privateKey.decrypt(c.subtract(c2)).equals(BigDecimal.valueOf(v2));
+        assert keyPair.privateKey.decrypt(c.multiply(m2)).equals(BigDecimal.valueOf(v3));
+        assert keyPair.privateKey.decrypt(c.divide(m2)).equals(BigDecimal.valueOf(v4));
     }
 
     /**
@@ -93,8 +96,8 @@ public class App {
         Double m4 = -2.5;
         Paillier.EncryptedNumber c4 = keyPair.publicKey.encrypt(m4);
 
-        secureCompute(keyPair, m, c, m1, c1, m2, c2, m1 + m2, m1 - m2, m1 * m2, m1 / m2);
+        secureCompute(keyPair, m, c, m1, c1, m2, c2, m + m2, m - m2, m * m2, m / m2);
 
-        secureCompute(keyPair, m1, c, m3, c3, m4, c4, m1 + m4, m1 - m4, m1 * m4, m1 / m4);
+        secureCompute(keyPair, m, c, m3, c3, m4, c4, m + m4, m - m4, m * m4, m/ m4);
     }
 }
