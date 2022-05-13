@@ -224,7 +224,7 @@ public class Util {
             if (Objects.equals(nums[1], zero)) {
                 return new BigInteger(nums[0]);
             } else {
-                return n;
+                return new BigDecimal(String.valueOf(n));
             }
         } else {
             return n;

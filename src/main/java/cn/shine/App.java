@@ -76,7 +76,7 @@ public class App {
      * @param args some args
      */
     public static void main(String[] args) {
-        Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(4096);
+        Paillier.PaillierKeyPair keyPair = Paillier.PaillierKeyPair.generate(512);
 
         Integer m = 10;
         Paillier.EncryptedNumber c = keyPair.publicKey.encrypt(m);
@@ -84,15 +84,15 @@ public class App {
         Integer m1 = 5;
         Paillier.EncryptedNumber c1 = keyPair.publicKey.encrypt(m1);
 
-        Double m2 = 2234.5131231231231231;
+        Double m2 = 2.5;
         Paillier.EncryptedNumber c2 = keyPair.publicKey.encrypt(m2);
 
         Integer m3 = -5;
         Paillier.EncryptedNumber c3 = keyPair.publicKey.encrypt(m3);
 
-        Double m4 = -222.51312312312313;
+        Double m4 = -2.5;
         Paillier.EncryptedNumber c4 = keyPair.publicKey.encrypt(m4);
-        c2.add(c4);
+
         secureCompute(keyPair, m, c, m1, c1, m2, c2, m1 + m2, m1 - m2, m1 * m2, m1 / m2);
 
         secureCompute(keyPair, m1, c, m3, c3, m4, c4, m1 + m4, m1 - m4, m1 * m4, m1 / m4);
